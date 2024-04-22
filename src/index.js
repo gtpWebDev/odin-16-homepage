@@ -1,6 +1,7 @@
 import "./styles.css";
 
 import topBannerImg from "./assets/images/top-banner.jpg";
+import twitterJpg from "./assets/icons/twitter.jpeg";
 
 import PhoneImg from "./assets/images/phone.svg";
 
@@ -9,7 +10,7 @@ import PhoneImg from "./assets/images/phone.svg";
 Accessibility checklist - record what I do, to summarise elsewhere:
 
   1. Semantic HTML:
-    header, main, fotter, sections, etc.
+    header, main, footer, sections, etc.
 
   2. Use of alts for all images
 
@@ -45,3 +46,21 @@ Stages of approach:
   - Use different images in different screen sizes
 
 */
+
+const setupHeaderDom = () => {
+  const topImg = document.querySelector("#top-image");
+  topImg.setAttribute("src", topBannerImg);
+  topImg.setAttribute("alt", "People sat around table working collaboratively");
+
+  const socialMediaIcons = document.querySelector("#social-media-icons");
+
+  const twitterIcon = document.createElement("img");
+  twitterIcon.setAttribute("id", "twitter");
+  twitterIcon.classList.add("socials-link");
+  twitterIcon.setAttribute("src", twitterJpg);
+  twitterIcon.setAttribute("alt", "Twitter");
+
+  socialMediaIcons.appendChild(twitterIcon);
+};
+
+setupHeaderDom();
