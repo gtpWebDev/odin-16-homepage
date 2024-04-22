@@ -48,20 +48,69 @@ body {
   font-family: "Roboto";
   /* Contains 3 sections arranged vertically, top aligned */
   display: grid;
-  justify-content: stretch;
   align-content: start;
   place-items: center;
 }
+
+header p {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/*
+  Main box has 20% margin either side
+  Image and text container receive 50%/50% split (image 30% takes half of 60% available)
+  Text wraps round image (image floats left)
+  Image extended to grow outside border of container - 3rd increase so take half of margin
+
+
+*/
 
 header {
   background-color: aquamarine;
 }
 
-#top-image {
-  width: 50vw;
+header h1 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.header-content {
+  margin: 15vw 20vw 60px 20vw;
+  position: relative;
+}
+
+header h2 {
+  margin: 0;
+  position: absolute;
+  font-size: 70px;
+  top: -8vw;
+  right: 30px;
+  z-index: 6;
+}
+
+/* Other content in parent floats around image,
+   while image is pushed outwards up and left */
+header img {
+  margin-right: 20px;
+  margin-bottom: 5px;
+  box-shadow: 1px 1px 30px -15px black;
+  /* border: 1px solid black; */
+  width: 30vw;
+  height: 30vw;
+  float: left;
+  transform: translateX(-15%) translateY(-15%) scale(130%);
+  position: relative;
+  z-index: 5;
 }
 
 #header-text-container {
+  box-shadow: 1px 1px 30px -15px black;
+  background-color: white;
+  padding: 80px 30px;
+  /* border: 1px solid black; */
+  position: relative;
+  z-index: 4;
 }
 
 .socials-link {

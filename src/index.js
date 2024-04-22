@@ -49,8 +49,8 @@ Stages of approach:
 
 const setupHeaderDom = () => {
   const topImg = document.querySelector("#top-image");
-  topImg.setAttribute("src", topBannerImg);
-  topImg.setAttribute("alt", "People sat around table working collaboratively");
+  topImg.src = topBannerImg;
+  topImg.alt = "People sat around table working collaboratively";
 
   const socialMediaIcons = document.querySelector("#social-media-icons");
 
@@ -60,7 +60,7 @@ const setupHeaderDom = () => {
   twitterIcon.setAttribute("src", twitterJpg);
   twitterIcon.setAttribute("alt", "Twitter");
 
-  socialMediaIcons.appendChild(twitterIcon);
+  // socialMediaIcons.appendChild(twitterIcon);
 };
 
 setupHeaderDom();
