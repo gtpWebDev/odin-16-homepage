@@ -1,0 +1,111 @@
+:root {
+  --font-hierarchy: "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* font-faces setup with styles and weight mean
+  can use the family definition in body and only the styles in the css design */
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Regular.ttf);
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Italic.ttf);
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-BoldItalic.ttf);
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-Thin.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto-ThinItalic.ttf);
+  font-style: italic;
+  font-weight: 100;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto";
+  /* Contains 3 sections arranged vertically, top aligned */
+  display: grid;
+  justify-content: stretch;
+  align-content: start;
+  place-items: center;
+}
+
+header {
+  background-color: aquamarine;
+}
+
+#top-image {
+  width: 50vw;
+}
+
+#header-text-container {
+}
+
+.socials-link {
+  width: 30px;
+}
+
+main {
+  background-color: azure;
+}
+
+footer {
+  background-color: aquamarine;
+}
+
+#thin-italic {
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 100;
+}
+
+#regular {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#bold {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#normal {
+  font-size: 40px;
+}
+
+/* tablet size, player windows above each other */
+@media (width > 640px) and (width <= 1024px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* tablet size, player windows above each other */
+@media (width <= 640px) {
+  body {
+    background-color: green;
+  }
+}
